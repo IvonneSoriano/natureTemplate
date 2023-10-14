@@ -15,7 +15,7 @@ a {
   text-decoration: none;
 }
 
-section {
+section, .section {
   margin: 14px 56px 0;
   padding: 16px;
 }
@@ -26,7 +26,7 @@ section {
   align-items: center;
   border-radius: 50px;
   background: #f4c53e;
-  color: #fff;
+  color: #FFF;
   text-align: center;
   font-family: Inter;
   font-size: 12px;
@@ -133,4 +133,17 @@ header nav li a {
 }
 .gallery .carrousell .card .card-img {
   margin-bottom: 25px;
+}
+
+/*FOOTER*/
+footer {
+  background: #3d5656;
+  color: #FFF;
+}
+footer p {
+  max-width: 485px;
+}
+footer .socialNetworks .icon {
+  height: 34px;
+  width: 34px;
 }/*# sourceMappingURL=style.css.map */
