@@ -15,20 +15,32 @@ li {
 a {
   text-decoration: none;
 }
+section {
+  margin: 14px 56px 0;
+  padding: 16px;
+}
 .btn {
   height: 35px;
   padding: 10px 52px;
   align-items: center;
   border-radius: 50px;
-background: #F4C53E;
-color: #FFF;
-text-align: center;
+  background: $primary;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+}
+.h2{
+  color: $black;
 font-family: Inter;
-font-size: 12px;
+font-size: 32px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-border: none;
 }
 
 /* HEADER */
@@ -59,6 +71,7 @@ header {
 /* Banner Section */
 .banner {
   position: relative;
+  margin: 0;
   // background-color: palegoldenrod;
   height: calc(100vh - 60px);
   .vector1 {
@@ -67,7 +80,7 @@ header {
     top: 0px;
     // z-index: -1;
   }
-  .vector2{
+  .vector2 {
     position: absolute;
     right: 0;
     top: -17%;
@@ -86,6 +99,7 @@ header {
         font-weight: 700;
         line-height: normal;
       }
+
     }
     p {
       max-width: 572px;
@@ -96,13 +110,35 @@ header {
   }
 }
 
-
 /*ABOUT US SECTION*/
-.aboutus{
-  .text{
+.aboutus {
+  .text {
     padding: 16px;
-    p{
+    p {
       margin: 20px 0;
+    }
+  }
+}
+
+
+/*GALLERY SECTION*/
+.gallery{
+  text-align: center;
+  .carrousell {
+    margin: 25px 0;
+    .card{
+      max-width: 290px;
+      h3{
+        color: $black;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+      }
+      .card-img{
+        margin-bottom: 25px;
+      }
     }
   }
 }

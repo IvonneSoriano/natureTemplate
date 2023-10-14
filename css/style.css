@@ -15,13 +15,18 @@ a {
   text-decoration: none;
 }
 
+section {
+  margin: 14px 56px 0;
+  padding: 16px;
+}
+
 .btn {
   height: 35px;
   padding: 10px 52px;
   align-items: center;
   border-radius: 50px;
-  background: #F4C53E;
-  color: #FFF;
+  background: #f4c53e;
+  color: #fff;
   text-align: center;
   font-family: Inter;
   font-size: 12px;
@@ -29,6 +34,15 @@ a {
   font-weight: 700;
   line-height: normal;
   border: none;
+}
+
+.h2 {
+  color: #3d5656;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 /* HEADER */
@@ -57,6 +71,7 @@ header nav li a {
 /* Banner Section */
 .banner {
   position: relative;
+  margin: 0;
   height: calc(100vh - 60px);
 }
 .banner .vector1 {
@@ -96,4 +111,26 @@ header nav li a {
 }
 .aboutus .text p {
   margin: 20px 0;
+}
+
+/*GALLERY SECTION*/
+.gallery {
+  text-align: center;
+}
+.gallery .carrousell {
+  margin: 25px 0;
+}
+.gallery .carrousell .card {
+  max-width: 290px;
+}
+.gallery .carrousell .card h3 {
+  color: #3d5656;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.gallery .carrousell .card .card-img {
+  margin-bottom: 25px;
 }/*# sourceMappingURL=style.css.map */
