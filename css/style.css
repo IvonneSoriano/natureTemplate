@@ -88,4 +88,12 @@ header nav li a {
   line-height: 1.9;
   margin-top: 76px;
   margin-bottom: 64px;
+}
+
+/*ABOUT US SECTION*/
+.aboutus .text {
+  padding: 16px;
+}
+.aboutus .text p {
+  margin: 20px 0;
 }/*# sourceMappingURL=style.css.map */
