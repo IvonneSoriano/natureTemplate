@@ -1,8 +1,8 @@
 /*GENERAL COLORS*/
 $third: #3d5656;
 $primary: #f4c53e;
-$secondary: #A9CEB2;
-$white: #FFF;
+$secondary: #a9ceb2;
+$white: #fff;
 
 /* GENERAL STYLE */
 *,
@@ -17,9 +17,13 @@ li {
 a {
   text-decoration: none;
 }
-section,.section {
+section,
+.section {
   margin: 14px 56px 0;
   padding: 16px;
+  @media (max-width:768px) {
+    margin: 0px;
+    }
 }
 .btn {
   height: 35px;
@@ -36,13 +40,13 @@ section,.section {
   line-height: normal;
   border: none;
 }
-.h2{
+.h2 {
   color: $third;
-font-family: Inter;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 /* HEADER */
@@ -55,6 +59,53 @@ header {
     font-weight: 700;
     line-height: normal;
   }
+  .toggle{
+    flex: 0 0 30%;
+    display: block;
+    text-align: right;
+    button{
+        width:20px;
+        height: 20px;
+        border: none;
+        position: relative;
+        padding: 15px;
+        background-color: transparent;
+        outline: none!important;
+        span{
+          background-color: $secondary;
+            height: 5px;
+            width:100%;
+            position: absolute;
+            border-radius: 4px;
+            left: 0;
+            transition: all 0.3s;
+            &.s1{
+                top: 10%;
+            }
+            &.s2{
+                top: 40%;
+                opacity: 1;
+            }
+            &.s3{
+                top: 70%;
+            }
+         
+        }
+        &.active{
+            span{
+                &.s1{
+                    transform: rotate(-45deg) translate(-5px, 5px);
+                }
+                &.s2{
+                    opacity: 0;
+                }
+                &.s3{
+                    transform: rotate(45deg) translate(-8px, -8px);
+                }
+            }
+        }
+    }
+}
   nav {
     min-width: 410px;
     padding: 16px;
@@ -66,6 +117,18 @@ header {
         font-weight: 700;
         line-height: normal;
       }
+    }
+  }
+  @media (max-width:768px) {
+    .logo{
+      flex: 0 0 70%;
+    }
+    .toggle{
+      flex: 0 0 30%;
+    }
+    nav{
+      background-color: $white;
+      display: none;
     }
   }
 }
@@ -80,12 +143,14 @@ header {
     position: absolute;
     left: 0px;
     top: 0px;
+    overflow: hidden;
     // z-index: -1;
   }
   .vector2 {
     position: absolute;
     right: 0;
-    top: -17%;
+    top: 0;
+    max-width: 100%;
   }
   .slide {
     position: absolute;
@@ -101,7 +166,6 @@ header {
         font-weight: 700;
         line-height: normal;
       }
-
     }
     p {
       max-width: 572px;
@@ -110,35 +174,74 @@ header {
       margin-bottom: 64px;
     }
   }
+  /*Actividad: 
+  Qué pasa si el media lo coloco en la parte de arriba?*/
+  @media (max-width: 1280px) {
+    // height: auto;
+    min-height: 50vh;
+    .slide {
+      top: 10%;
+      left: 10%;
+    }
+    .vector2 {
+      bottom: -50%;
+      top: 0;
+    }
+  }
+
+  @media (max-width: 700px) {
+    // min-height: 60vh;
+    overflow: hidden;
+    .slide {
+      top: 0%;
+    }
+    .vector2 {
+      top: 15%;
+      bottom: unset;
+      right: 25%;
+    }
+  }
 }
 
 /*ABOUT US SECTION*/
 .aboutus {
+  img{
+    max-width: 100%;
+  }
   .text {
     padding: 16px;
     p {
       margin: 20px 0;
     }
   }
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
 }
 
-
 /*GALLERY SECTION*/
-.gallery{
+.gallery {
   text-align: center;
   .carrousell {
     margin: 25px 0;
-    .card{
+    .card {
       max-width: 290px;
-      h3{
+      h3 {
         color: $third;
-font-family: Inter;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
       }
-      .card-img{
+      .card-img {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  @media (max-width: 1280px) {
+    .carrousell {
+      .card {
         margin-bottom: 25px;
       }
     }
@@ -146,17 +249,32 @@ line-height: normal;
 }
 
 /*FOOTER*/
-footer{
+footer {
   background: $third;
   color: $white;
-  p{
+  p {
     max-width: 485px;
   }
-  .socialNetworks{
-    .icon{
+  .socialNetworks {
+    width: 200px;
+    .icon {
       height: 34px;
       width: 34px;
+      color: $white;
+      // margin-left: 20px;
+      svg {
+        height: 100%;
+        width: 100%;
+      }
     }
-    
+  }
+  @media (max-width: 1280px) {
+    > div {
+      flex-direction: column;
+      text-align: center;
+      .item {
+        margin-bottom: 40px;
+      }
+    }
   }
 }

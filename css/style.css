@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*GENERAL COLORS*/
 /* GENERAL STYLE */
 *,
@@ -15,9 +16,16 @@ a {
   text-decoration: none;
 }
 
-section, .section {
+section,
+.section {
   margin: 14px 56px 0;
   padding: 16px;
+}
+@media (max-width: 768px) {
+  section,
+  .section {
+    margin: 0px;
+  }
 }
 
 .btn {
@@ -26,7 +34,7 @@ section, .section {
   align-items: center;
   border-radius: 50px;
   background: #f4c53e;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Inter;
   font-size: 12px;
@@ -56,6 +64,48 @@ header .logo {
   font-weight: 700;
   line-height: normal;
 }
+header .toggle {
+  flex: 0 0 30%;
+  display: block;
+  text-align: right;
+}
+header .toggle button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  position: relative;
+  padding: 15px;
+  background-color: transparent;
+  outline: none !important;
+}
+header .toggle button span {
+  background-color: #a9ceb2;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  border-radius: 4px;
+  left: 0;
+  transition: all 0.3s;
+}
+header .toggle button span.s1 {
+  top: 10%;
+}
+header .toggle button span.s2 {
+  top: 40%;
+  opacity: 1;
+}
+header .toggle button span.s3 {
+  top: 70%;
+}
+header .toggle button.active span.s1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+header .toggle button.active span.s2 {
+  opacity: 0;
+}
+header .toggle button.active span.s3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
 header nav {
   min-width: 410px;
   padding: 16px;
@@ -67,22 +117,38 @@ header nav li a {
   font-weight: 700;
   line-height: normal;
 }
+@media (max-width: 768px) {
+  header .logo {
+    flex: 0 0 70%;
+  }
+  header .toggle {
+    flex: 0 0 30%;
+  }
+  header nav {
+    background-color: #fff;
+    display: none;
+  }
+}
 
 /* Banner Section */
 .banner {
   position: relative;
   margin: 0;
   height: calc(100vh - 60px);
+  /*Actividad: 
+  Qué pasa si el media lo coloco en la parte de arriba?*/
 }
 .banner .vector1 {
   position: absolute;
   left: 0px;
   top: 0px;
+  overflow: hidden;
 }
 .banner .vector2 {
   position: absolute;
   right: 0;
-  top: -17%;
+  top: 0;
+  max-width: 100%;
 }
 .banner .slide {
   position: absolute;
@@ -104,13 +170,47 @@ header nav li a {
   margin-top: 76px;
   margin-bottom: 64px;
 }
+@media (max-width: 1280px) {
+  .banner {
+    min-height: 50vh;
+  }
+  .banner .slide {
+    top: 10%;
+    left: 10%;
+  }
+  .banner .vector2 {
+    bottom: -50%;
+    top: 0;
+  }
+}
+@media (max-width: 700px) {
+  .banner {
+    overflow: hidden;
+  }
+  .banner .slide {
+    top: 0%;
+  }
+  .banner .vector2 {
+    top: 15%;
+    bottom: unset;
+    right: 25%;
+  }
+}
 
 /*ABOUT US SECTION*/
+.aboutus img {
+  max-width: 100%;
+}
 .aboutus .text {
   padding: 16px;
 }
 .aboutus .text p {
   margin: 20px 0;
+}
+@media (max-width: 1280px) {
+  .aboutus {
+    flex-direction: column;
+  }
 }
 
 /*GALLERY SECTION*/
@@ -134,16 +234,38 @@ header nav li a {
 .gallery .carrousell .card .card-img {
   margin-bottom: 25px;
 }
+@media (max-width: 1280px) {
+  .gallery .carrousell .card {
+    margin-bottom: 25px;
+  }
+}
 
 /*FOOTER*/
 footer {
   background: #3d5656;
-  color: #FFF;
+  color: #fff;
 }
 footer p {
   max-width: 485px;
 }
+footer .socialNetworks {
+  width: 200px;
+}
 footer .socialNetworks .icon {
   height: 34px;
   width: 34px;
+  color: #fff;
+}
+footer .socialNetworks .icon svg {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 1280px) {
+  footer > div {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer > div .item {
+    margin-bottom: 40px;
+  }
 }/*# sourceMappingURL=style.css.map */

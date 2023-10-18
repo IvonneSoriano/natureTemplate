@@ -1,0 +1,37 @@
+/* GENERAL STYLE */
+*,
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: Inter;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
+  margin: 60px 56px;
+}
+header nav {
+  min-width: 410px;
+  padding: 16px;
+}
+header .logo {
+  color: #3d5656;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+header nav li a {
+  color: #3d5656;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
