@@ -110,6 +110,11 @@ header nav {
   min-width: 410px;
   padding: 16px;
 }
+header nav.active {
+  display: flex !important;
+  height: calc(100vh - 60px);
+  width: 100%;
+}
 header nav li a {
   color: #3d5656;
   font-size: 20px;
@@ -126,7 +131,7 @@ header nav li a {
   }
   header nav {
     background-color: #fff;
-    display: none;
+    min-width: unset;
   }
 }
 
@@ -200,14 +205,16 @@ header nav li a {
 /*ABOUT US SECTION*/
 .aboutus img {
   max-width: 100%;
+  flex: 0 0 50%;
 }
 .aboutus .text {
+  flex: 0 0 50%;
   padding: 16px;
 }
 .aboutus .text p {
   margin: 20px 0;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
   .aboutus {
     flex-direction: column;
   }
@@ -260,7 +267,7 @@ footer .socialNetworks .icon svg {
   height: 100%;
   width: 100%;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
   footer > div {
     flex-direction: column;
     text-align: center;

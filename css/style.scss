@@ -21,9 +21,9 @@ section,
 .section {
   margin: 14px 56px 0;
   padding: 16px;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     margin: 0px;
-    }
+  }
 }
 .btn {
   height: 35px;
@@ -59,56 +59,60 @@ header {
     font-weight: 700;
     line-height: normal;
   }
-  .toggle{
+  .toggle {
     flex: 0 0 30%;
     display: block;
     text-align: right;
-    button{
-        width:20px;
-        height: 20px;
-        border: none;
-        position: relative;
-        padding: 15px;
-        background-color: transparent;
-        outline: none!important;
-        span{
-          background-color: $secondary;
-            height: 5px;
-            width:100%;
-            position: absolute;
-            border-radius: 4px;
-            left: 0;
-            transition: all 0.3s;
-            &.s1{
-                top: 10%;
-            }
-            &.s2{
-                top: 40%;
-                opacity: 1;
-            }
-            &.s3{
-                top: 70%;
-            }
-         
+    button {
+      width: 20px;
+      height: 20px;
+      border: none;
+      position: relative;
+      padding: 15px;
+      background-color: transparent;
+      outline: none !important;
+      span {
+        background-color: $secondary;
+        height: 5px;
+        width: 100%;
+        position: absolute;
+        border-radius: 4px;
+        left: 0;
+        transition: all 0.3s;
+        &.s1 {
+          top: 10%;
         }
-        &.active{
-            span{
-                &.s1{
-                    transform: rotate(-45deg) translate(-5px, 5px);
-                }
-                &.s2{
-                    opacity: 0;
-                }
-                &.s3{
-                    transform: rotate(45deg) translate(-8px, -8px);
-                }
-            }
+        &.s2 {
+          top: 40%;
+          opacity: 1;
         }
+        &.s3 {
+          top: 70%;
+        }
+      }
+      &.active {
+        span {
+          &.s1 {
+            transform: rotate(-45deg) translate(-5px, 5px);
+          }
+          &.s2 {
+            opacity: 0;
+          }
+          &.s3 {
+            transform: rotate(45deg) translate(-8px, -8px);
+          }
+        }
+      }
     }
-}
+  }
   nav {
     min-width: 410px;
     padding: 16px;
+    &.active {
+      display: flex!important;
+      height: calc(100vh - 60px);
+      width: 100%;
+    }
     li {
       a {
         color: $third;
@@ -119,16 +123,18 @@ header {
       }
     }
   }
-  @media (max-width:768px) {
-    .logo{
+  @media (max-width: 768px) {
+    .logo {
       flex: 0 0 70%;
     }
-    .toggle{
+    .toggle {
       flex: 0 0 30%;
     }
-    nav{
+    nav {
       background-color: $white;
-      display: none;
+      min-width: unset;
+
+      // display: none;
     }
   }
 }
@@ -205,16 +211,18 @@ header {
 
 /*ABOUT US SECTION*/
 .aboutus {
-  img{
+  img {
     max-width: 100%;
+    flex: 0 0 50%;
   }
   .text {
+    flex: 0 0 50%;
     padding: 16px;
     p {
       margin: 20px 0;
     }
   }
-  @media (max-width: 1280px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
   }
 }
@@ -268,7 +276,7 @@ footer {
       }
     }
   }
-  @media (max-width: 1280px) {
+  @media (max-width: 1200px) {
     > div {
       flex-direction: column;
       text-align: center;

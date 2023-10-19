@@ -1,4 +1,6 @@
 function onToogle(){
 let elem = document.getElementById("toggleBtn");
-elem.cla
+let elemNav = document.getElementById("nav");
+elemNav.classList.toggle("active")
+elem.classList.toggle("active")
 }
